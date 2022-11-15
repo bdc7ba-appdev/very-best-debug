@@ -39,7 +39,7 @@ class VenuesController < ApplicationController
   end
 
   def destroy
-    the_id = params.fetch("the_id")
+    the_id = params.fetch("venue_id")
     matching_venues = Venue.where({ :id => the_id })
     venue = matching_venues.at(0)
     venue.destroy
